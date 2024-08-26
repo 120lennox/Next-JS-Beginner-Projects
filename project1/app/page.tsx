@@ -1,3 +1,3 @@
 export default function Page(){
-  return <h1>Hello world</h1>
+  return <h1 className="flex items-center text-green-100">Hello world</h1>
 }
