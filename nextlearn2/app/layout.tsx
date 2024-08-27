@@ -55,7 +55,7 @@ export default function RootLayout({
           </ul>
         </div>
         <div className="navbar-end">
-          <a className="btn">Button</a>
+          <a className="btn">Register</a>
         </div>
       </div>
         {children}
