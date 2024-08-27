@@ -38,20 +38,18 @@ export default function RootLayout({
             <ul
               tabIndex={0}
               className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-              <li><Link href="/">Home</Link></li>
-              <li><Link href="/community">Community</Link></li>
               <li><Link href="/about">About</Link></li>
-              <li><Link href="/contact">Contact us</Link></li>
+              <li><Link href="/contact">Contact</Link></li>
+              <li><Link href="/gitusers">Github Users</Link></li>
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl">untitled project</a>
+          <Link href="/" className="btn btn-ghost text-xl">Nthano</Link>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
-          <li><Link href="/">Home</Link></li>
-          <li><Link href="/community">Community</Link></li>
           <li><Link href="/about">About</Link></li>
-          <li><Link href="/contact">Contact us</Link></li>
+          <li><Link href="/contact">Contact</Link></li>
+          <li><Link href="/gitusers">Github Users</Link></li>
           </ul>
         </div>
         <div className="navbar-end">
