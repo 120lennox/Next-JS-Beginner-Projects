@@ -1,4 +1,4 @@
-
+import Link from "next/link"
 async function fetchGitHubUsers(){
     const res = await fetch("https://api.github.com/search/users?q=greg")
     const json = await res.json()
@@ -8,17 +8,12 @@ async function fetchGitHubUsers(){
 const GitUserPage = async()=>{
     const users = await fetchGitHubUsers()
     console.log(users)
-    return <div>
+    return <div className="">
         <div className="overflow-x-auto">
         <table className="table">
             {/* head */}
             <thead>
             <tr>
-                <th>
-                <label>
-                    <input type="checkbox" className="checkbox" />
-                </label>
-                </th>
                 <th>Name</th>
                 <th>URL</th>
                 <th>Repos</th>
@@ -27,6 +22,7 @@ const GitUserPage = async()=>{
             </thead>
             <tbody>
             {/* row 1 */}
+                {/* column 1 */}
                 { users.map((user)=>(
                     <tr key={user.id}>
                         <td>
@@ -36,8 +32,23 @@ const GitUserPage = async()=>{
                                         <img src={user.avatar_url} alt="" />
                                     </div>
                                 </div>
+                                <div>
+                                    <div className="font-bold">
+                                        {user.login}
+                                    </div>
+                                    <div className="text-sm opacity-50">
+                                        {user.id}
+                                    </div>
+                                </div>
                             </div>
                         </td>
+                    {/* column 2 */}
+                        <td>
+                            <Link href={user.html_url} className="btn btn-link"> View on Github</Link>
+                        </td>
+                        <th>
+                            <Link href={`/githubusers/${user.login}`} className="btn btn-link">Go to Repos</Link>
+                        </th>
                     </tr>
                 )) }
             {/* row 2 */}
