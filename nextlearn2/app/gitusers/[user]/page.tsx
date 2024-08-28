@@ -1,5 +1,7 @@
+import Repos from "@/app/components/Repos"
+
 export default function UserReposPage({params:{user}}){
     return <div>
-        <h1>User Repos Page</h1>
+        <Repos user={user} />
     </div>
 }
