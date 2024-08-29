@@ -9,6 +9,6 @@ export async function GET(req){
         return book.title.toLowerCase().includes(query.toLowerCase())
     })
 
-    console.log(filteredResults)
+    //console.log(filteredResults)
     return NextResponse.json(filteredResults)
 }
