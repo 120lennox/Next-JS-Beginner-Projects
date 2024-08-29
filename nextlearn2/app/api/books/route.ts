@@ -1,4 +1,4 @@
-import books from './books/data.json'
+import books from './data.json'
 import { NextResponse } from 'next/server'
 
 
