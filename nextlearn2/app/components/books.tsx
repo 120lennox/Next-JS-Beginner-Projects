@@ -16,7 +16,7 @@ const Books = async()=>{
     return <div>
         <h1>Books here</h1>
         <div className="flex justify-between items-center">
-            {books.map((book)=>(
+            {books.map((book:any)=>(
                 <div key={book.id}>
                     <div className="card w-96 bg-base-100 shadow-xl">
                         <figure>

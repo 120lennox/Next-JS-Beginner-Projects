@@ -1,5 +1,5 @@
 
-async function fetchRepos(user){
+async function fetchRepos(user:any){
     const res = await fetch(`https://api.github.com/users/${user}/repos`, {
         next:{
             revalidate: 60 //revalidate every 1 minute
@@ -9,7 +9,7 @@ async function fetchRepos(user){
     return json
 }
 
-const Repos = async({user}) =>{
+const Repos = async({user:any}) =>{
     const repos = await fetchRepos(user)
     console.log(repos)
 
