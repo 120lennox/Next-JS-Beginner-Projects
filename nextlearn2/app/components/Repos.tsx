@@ -9,7 +9,7 @@ async function fetchRepos(user:any){
     return json
 }
 
-const Repos = async({user:any}) =>{
+const Repos = async({user}) =>{
     const repos = await fetchRepos(user)
     console.log(repos)
 

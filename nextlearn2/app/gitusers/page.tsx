@@ -27,7 +27,7 @@ const GitUserPage = async()=>{
             <tbody>
             {/* row 1 */}
                 {/* column 1 */}
-                { users.map((user:any)=>(
+                { users.map((user)=>(
                     <tr key={user.id}>
                         <td>
                             <div className="flex items-center space-x-3 ">
